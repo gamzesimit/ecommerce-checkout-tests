@@ -1,0 +1,20 @@
+{
+  "name": "ecommerce-checkout-tests",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "playwright test",
+    "report": "playwright show-report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "description": "Playwright suite for a storefront, built around checkout arithmetic and catalogue promises",
+  "devDependencies": {
+    "@playwright/test": "^1.63.0"
+  }
+}
