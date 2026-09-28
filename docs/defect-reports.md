@@ -73,6 +73,7 @@ adding to the cart stops working".
 **Status:** Reproducible on every attempt
 
 **Steps**
+
 1. Sign in and add nothing to the cart.
 2. Open the cart and press Checkout.
 3. Fill in the name and postal code and continue.
