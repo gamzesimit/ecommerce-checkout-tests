@@ -16,6 +16,7 @@ them, which is what the reports below record.
 **Status:** Reproducible on every attempt
 
 **Steps**
+
 1. Sign in as `problem_user`.
 2. Look at the catalogue.
 
@@ -43,6 +44,7 @@ product images are wrong".
 **Status:** Reproducible for specific products
 
 **Steps**
+
 1. Sign in as `problem_user`.
 2. Add "Sauce Labs Fleece Jacket" to the cart.
 

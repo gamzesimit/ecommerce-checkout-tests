@@ -43,7 +43,10 @@ test.describe('Checkout arithmetic', () => {
   });
 
   test('the item total equals the sum of the lines shown on the same page', async ({ page }) => {
-    const { checkout } = await checkoutWith(page, ['Sauce Labs Backpack', 'Sauce Labs Fleece Jacket']);
+    const { checkout } = await checkoutWith(page, [
+      'Sauce Labs Backpack',
+      'Sauce Labs Fleece Jacket',
+    ]);
     const lines = await checkout.lineItemPrices();
     expect(await checkout.itemTotal()).toBe(roundCents(lines.reduce((a, b) => a + b, 0)));
   });

@@ -7,9 +7,13 @@ export function parsePrice(text: string): number {
 export class CataloguePage {
   constructor(private readonly page: Page) {}
 
-  async goto() { await this.page.goto('/inventory.html'); }
+  async goto() {
+    await this.page.goto('/inventory.html');
+  }
 
-  items(): Locator { return this.page.locator('[data-test="inventory-item"]'); }
+  items(): Locator {
+    return this.page.locator('[data-test="inventory-item"]');
+  }
 
   async names(): Promise<string[]> {
     return this.page.locator('[data-test="inventory-item-name"]').allInnerTexts();
@@ -39,7 +43,9 @@ export class CataloguePage {
     return (await badge.count()) ? Number(await badge.innerText()) : 0;
   }
 
-  async openCart() { await this.page.click('[data-test="shopping-cart-link"]'); }
+  async openCart() {
+    await this.page.click('[data-test="shopping-cart-link"]');
+  }
 
   async expectLoaded() {
     await expect(this.page.locator('[data-test="inventory-list"]')).toBeVisible();
