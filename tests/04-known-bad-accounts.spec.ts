@@ -17,9 +17,9 @@ test.describe('Accounts that behave badly on purpose', () => {
 
     const catalogue = new CataloguePage(page);
     await catalogue.expectLoaded();
-    const sources = await page.locator('.inventory_item_img img').evaluateAll(
-      (els: any[]) => els.map((e) => e.getAttribute('src'))
-    );
+    const sources = await page
+      .locator('.inventory_item_img img')
+      .evaluateAll((els: any[]) => els.map((e) => e.getAttribute('src')));
     const distinct = new Set(sources);
     expect(distinct.size, 'every product must carry its own image').toBeGreaterThan(1);
   });

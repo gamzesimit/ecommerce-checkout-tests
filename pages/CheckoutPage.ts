@@ -4,7 +4,9 @@ import { parsePrice } from './CataloguePage';
 export class CheckoutPage {
   constructor(private readonly page: Page) {}
 
-  async startCheckout() { await this.page.click('[data-test="checkout"]'); }
+  async startCheckout() {
+    await this.page.click('[data-test="checkout"]');
+  }
 
   async fillDetails(firstName: string, lastName: string, postalCode: string) {
     await this.page.fill('[data-test="firstName"]', firstName);
@@ -42,7 +44,9 @@ export class CheckoutPage {
     return (upToSummary.match(/\$\s?\d+(?:\.\d{2})?/g) ?? []).map(parsePrice);
   }
 
-  async finish() { await this.page.click('[data-test="finish"]'); }
+  async finish() {
+    await this.page.click('[data-test="finish"]');
+  }
 
   async expectOrderPlaced() {
     await expect(this.page.locator('[data-test="complete-header"]')).toBeVisible();

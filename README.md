@@ -18,12 +18,12 @@ npx playwright show-report
 
 ## What is covered
 
-| File | Area |
-|---|---|
-| `tests/01-login.spec.ts` | Valid sign in, locked account, wrong password, empty form, and whether the error reveals that a username exists |
-| `tests/02-catalogue.spec.ts` | Every product carries a name, description and price; all four sort orders really sort; the cart badge counts what was added |
-| `tests/03-checkout-maths.spec.ts` | Item total against the lines, tax at the stated rate, total against item total plus tax, single item against a basket, order placed, postal code required |
-| `tests/04-known-bad-accounts.spec.ts` | The accounts the application breaks on purpose, used to prove the suite catches faults rather than reporting green through them |
+| File                                  | Area                                                                                                                                                      |
+| ------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `tests/01-login.spec.ts`              | Valid sign in, locked account, wrong password, empty form, and whether the error reveals that a username exists                                           |
+| `tests/02-catalogue.spec.ts`          | Every product carries a name, description and price; all four sort orders really sort; the cart badge counts what was added                               |
+| `tests/03-checkout-maths.spec.ts`     | Item total against the lines, tax at the stated rate, total against item total plus tax, single item against a basket, order placed, postal code required |
+| `tests/04-known-bad-accounts.spec.ts` | The accounts the application breaks on purpose, used to prove the suite catches faults rather than reporting green through them                           |
 
 Eighteen tests across two device profiles. Two are marked as known failures with
 `test.fail()` and carry the defect id they belong to.

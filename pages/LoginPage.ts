@@ -3,7 +3,9 @@ import { Page, expect } from '@playwright/test';
 export class LoginPage {
   constructor(private readonly page: Page) {}
 
-  async goto() { await this.page.goto('/'); }
+  async goto() {
+    await this.page.goto('/');
+  }
 
   async login(username: string, password: string) {
     await this.page.fill('[data-test="username"]', username);
