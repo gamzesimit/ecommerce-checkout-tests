@@ -17,6 +17,7 @@
   "license": "MIT",
   "description": "Playwright suite for a storefront, built around checkout arithmetic and catalogue promises",
   "devDependencies": {
+    "@axe-core/playwright": "^4.13.0",
     "@playwright/test": "^1.63.0",
     "prettier": "^3.9.9"
   }
