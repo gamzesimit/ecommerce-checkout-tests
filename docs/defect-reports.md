@@ -64,6 +64,37 @@ adding to the cart stops working".
 
 ---
 
+---
+
+## SD-003 - An empty cart is checked out and the order is confirmed
+
+**Severity:** Medium
+**Area:** Cart and checkout
+**Status:** Reproducible on every attempt
+
+**Steps**
+1. Sign in and add nothing to the cart.
+2. Open the cart and press Checkout.
+3. Fill in the name and postal code and continue.
+4. Press Finish.
+
+**Result**
+The overview page shows a total of $0.00 and the store answers
+"Thank you for your order!" on `checkout-complete.html`.
+
+**Expected**
+Checkout is not offered for an empty cart, or the customer is told the cart is
+empty before the order is placed.
+
+**Impact**
+Every empty order that reaches the order system has to be cleaned out of it by
+hand, and an order count that includes them cannot be used to measure anything.
+It also means the button that places an order does not check the one condition
+that has to hold before it runs.
+
+**Covered by** `tests/05-cart.spec.ts`, "an empty cart cannot be checked out into
+a completed order", with a second test pinning the present behaviour.
+
 ## Rules that hold
 
 - Sorting by price low to high, high to low and by name A to Z all return the
