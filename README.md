@@ -24,8 +24,11 @@ npx playwright show-report
 | `tests/02-catalogue.spec.ts`          | Every product carries a name, description and price; all four sort orders really sort; the cart badge counts what was added                               |
 | `tests/03-checkout-maths.spec.ts`     | Item total against the lines, tax at the stated rate, total against item total plus tax, single item against a basket, order placed, postal code required |
 | `tests/04-known-bad-accounts.spec.ts` | The accounts the application breaks on purpose, used to prove the suite catches faults rather than reporting green through them                           |
+| `tests/05-cart.spec.ts`               | The cart holds what was added at the catalogue price, removal, surviving navigation, an empty cart that must not become an order                          |
+| `tests/06-session.spec.ts`            | Catalogue and cart closed without signing in, sign out and the back button, the reset link                                                                |
+| `tests/07-accessibility.spec.ts`      | No blocking accessibility failures on sign in and the catalogue, alternative text on every product image                                                  |
 
-Eighteen tests across two device profiles. Two are marked as known failures with
+Thirty two tests, each run on desktop Chromium and a phone profile. Three are marked as known failures with
 `test.fail()` and carry the defect id they belong to.
 
 ## Why the arithmetic
